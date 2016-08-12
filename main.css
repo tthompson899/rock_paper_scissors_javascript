@@ -3,6 +3,12 @@
   width: 600px;
   margin: 0 auto;
 }
+
+  .timer{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px; 
+  }
 h1{
   color: purple;
 
