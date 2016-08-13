@@ -34,6 +34,17 @@ $(document).ready(function(){
         $('.warning').hide(); // hide warning once countdown complete
         // Hide options div when times up or game over
         $('.options').hide();
+        $('.robot_decision').hide();
+
+        if(winner > loser){
+          $('.who_won').append("You Won!");
+        }
+        else if(loser > winner){
+          $('.who_won').append("You Lost!");
+        }
+        else{
+          $('.who_won').append("It's a Tie!");
+        }
       }
 
       if(sec <= 0){ // No more Seconds...
@@ -87,7 +98,6 @@ $(document).ready(function(){
   function game_score(){
     // how to win: rock beats scissors, scissors beats paper, paper beats rock
     // how to draw: the same thing is chosen by each player
-    console.log("user: " + user_chosen + "Robot: " + robot_chosen);
     if((user_chosen == 'rock' && robot_chosen == 'scissors') ||
         (user_chosen == 'scissors' && robot_chosen == 'paper') ||
         (user_chosen == 'paper' && robot_chosen == 'rock')){
@@ -107,6 +117,5 @@ $(document).ready(function(){
       drawer++;
       $('#count_draw').text(drawer);
     }
-
   }
 });
