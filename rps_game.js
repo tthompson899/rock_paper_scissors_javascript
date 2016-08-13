@@ -4,7 +4,7 @@ $(document).ready(function(){
 
   // User input time, .click is triggered
   $('#play_game').click(function(){
-    options();
+    options(); // get the choice of the user
 
     var min = $('#mins').val();
     var sec = $('#secs').val();
@@ -59,6 +59,7 @@ $(document).ready(function(){
     // Find the id of button the user clicked
     $('button').click(function(){
       var chosen = this.id;
+      console.log(chosen);
       robot_choice();
     })
   }
@@ -66,7 +67,15 @@ $(document).ready(function(){
   function robot_choice(){
     choices = ['rock', 'paper', 'scissors'];
 
-    
+    var choice = choices[Math.floor(Math.random()*choices.length)]; // robot chose random value from choices array
+    $('.robot_decision').html("<h2>The Robot's Choice is: " + choice + "</h2>");
+
+    var score = $('<h1 id="score">SCORE</h1>')
+        win = $('<div id="wins"></div>'),
+        loss = $('<div id="losses"></div>'),
+        draw = $('<div id="draws"></div>');
+
+    $('.score').append(score, win, loss, draw);
   }
 
 });

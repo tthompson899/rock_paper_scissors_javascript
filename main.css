@@ -20,7 +20,6 @@
     }
 
   .options{
-    border: 2px solid black;
     width: 743px;
     height: 200px;
     margin-top: 25px;
@@ -46,3 +45,21 @@
   .user_input{
     margin-left: 81px;
   }
+
+  /* div to hold score divs */
+  .score{
+    width: 600px;
+    height: 250px;
+  }
+    /* Heading for .score div */
+    #score{
+      margin-left: 235px;
+    }
+    #wins, #losses, #draws{
+      display: inline-block;
+      border: 2px solid black;
+      height: 157px;
+      width: 162px;
+      margin: 71px 24px 0px 10px;
+      margin-top: -3px;
+    }
