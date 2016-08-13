@@ -62,7 +62,7 @@
       width: 162px;
       margin: 71px 24px 0px 10px;
       margin-top: -3px;
-      border-radius: 14px; 
+      border-radius: 14px;
     }
       #wins{
         background-color: #00B200;
@@ -78,7 +78,7 @@
       margin-top: 24px;
       font-size: 20pt;
     }
-    #count{
+    #count_win, #count_lose, #count_draw{
       font-size: 20pt;
       margin-left: 75px;
       margin-top: 19px;

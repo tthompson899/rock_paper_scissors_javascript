@@ -2,6 +2,18 @@ $(document).ready(function(){
   // set the time to zero:
   $('.time_holder').text("Minutes: " + 0 + " Seconds: " + 0);
 
+  // set the score for each outcome to zero
+  winner = 0;
+  loser = 0;
+  drawer = 0;
+
+  var score = $('<h1 id="score">SCORE</h1>'),
+      win = $('<div id="wins"><p id="keep_score">Wins <p id="count_win">'+ winner + '</p></p></div>'),
+      loss = $('<div id="losses"><p id="keep_score">Losses <p id="count_lose">' + loser + '</p></p></div>'),
+      draw = $('<div id="draws"><p id="keep_score">Draws <p id="count_draw">' + drawer + '</p></p></div>');
+
+  $('.score').append(score, win, loss, draw);
+
   // User input time, .click is triggered
   $('#play_game').click(function(){
     options(); // get the choice of the user
@@ -58,24 +70,43 @@ $(document).ready(function(){
   function user_choice(){
     // Find the id of button the user clicked
     $('button').click(function(){
-      var chosen = this.id;
-      console.log(chosen);
+      user_chosen = this.id;
       robot_choice();
     })
   }
 
   function robot_choice(){
-    choices = ['rock', 'paper', 'scissors'];
+    var choices = ['rock', 'paper', 'scissors'];
 
-    var choice = choices[Math.floor(Math.random()*choices.length)]; // robot chose random value from choices array
-    $('.robot_decision').html("<h2>The Robot's Choice is: " + choice + "</h2>");
+    robot_chosen = choices[Math.floor(Math.random()*choices.length)]; // robot chose random value from choices array
+    $('.robot_decision').html("<h2>The Robot's Choice is: " + robot_chosen + "</h2>");
 
-    var score = $('<h1 id="score">SCORE</h1>'),
-        win = $('<div id="wins"><p id="keep_score">Wins <p id="count">0</p></p></div>'),
-        loss = $('<div id="losses"><p id="keep_score">Losses <p id="count">0</p></p></div>'),
-        draw = $('<div id="draws"><p id="keep_score">Draws <p id="count">0</p></p></div>');
-
-    $('.score').append(score, win, loss, draw);
+    game_score();
   }
 
+  function game_score(){
+    // how to win: rock beats scissors, scissors beats paper, paper beats rock
+    // how to draw: the same thing is chosen by each player
+    console.log("user: " + user_chosen + "Robot: " + robot_chosen);
+    if((user_chosen == 'rock' && robot_chosen == 'scissors') ||
+        (user_chosen == 'scissors' && robot_chosen == 'paper') ||
+        (user_chosen == 'paper' && robot_chosen == 'rock')){
+
+      winner++;
+      $('#count_win').text(winner);
+    }
+    else if ((user_chosen == 'scissors' && robot_chosen == 'rock') ||
+        (user_chosen == 'paper' && robot_chosen == 'scissors') ||
+        (user_chosen == 'rock') && robot_chosen == 'paper') {
+
+        loser++;
+        $('#count_lose').text(loser);
+    }
+    else{
+      // draw
+      drawer++;
+      $('#count_draw').text(drawer);
+    }
+
+  }
 });
