@@ -3,7 +3,9 @@ $(document).ready(function(){
   $('.time_holder').text("Minutes: " + 0 + " Seconds: " + 0);
 
   // User input time, .click is triggered
-  $('.play_game').click(function(){
+  $('#play_game').click(function(){
+    options();
+
     var min = $('#mins').val();
     var sec = $('#secs').val();
 
@@ -40,4 +42,13 @@ $(document).ready(function(){
     $('#mins').val('');
     $('#secs').val('');
   });
+
+  function options(){
+    var rock = $('<button id="rock">Rock</button>'),
+        paper = $('<button id="paper">Paper</button>'),
+        scissors = $('<button id="scissors">Scissors</button>');
+
+    $('.options').append(rock, paper, scissors);
+  }
+
 });

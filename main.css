@@ -19,6 +19,30 @@
       color: red;
     }
 
-  h3, .play_game{
+  .options{
+    border: 2px solid black;
+    width: 743px;
+    height: 200px;
+    margin-top: 25px;
+    margin-left: -50px;
+  }
+    #rock, #paper, #scissors{
+      margin-left: 41px;
+      margin-top: 65px;
+      height: 59px;
+      width: 194px;
+      position: relative;
+      border-radius: 10px;
+      background-color: green;
+      font-size: 24pt;
+      font-weight: 600;
+    }
+
+  /* Heading asking the user to enter in the time to play */
+  h3{
     margin-left: 90px;
+  }
+  /* Form for user input of the timer */
+  .user_input{
+    margin-left: 81px;
   }
