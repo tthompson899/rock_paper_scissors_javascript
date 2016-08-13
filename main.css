@@ -3,13 +3,22 @@
   width: 600px;
   margin: 0 auto;
 }
+  h1{
+    color: purple;
+  }
 
   .timer{
-    border: 2px solid black;
-    width: 200px;
-    height: 200px; 
+    width: 246px;
+    height: 100px;
+    margin: 0 auto;
   }
-h1{
-  color: purple;
+    .time_holder{
+      margin-left: 14px;
+    }
+    .warning{
+      color: red;
+    }
 
-}
+  h3, .play_game{
+    margin-left: 90px;
+  }
