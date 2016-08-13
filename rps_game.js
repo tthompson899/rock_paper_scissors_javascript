@@ -70,10 +70,10 @@ $(document).ready(function(){
     var choice = choices[Math.floor(Math.random()*choices.length)]; // robot chose random value from choices array
     $('.robot_decision').html("<h2>The Robot's Choice is: " + choice + "</h2>");
 
-    var score = $('<h1 id="score">SCORE</h1>')
-        win = $('<div id="wins"></div>'),
-        loss = $('<div id="losses"></div>'),
-        draw = $('<div id="draws"></div>');
+    var score = $('<h1 id="score">SCORE</h1>'),
+        win = $('<div id="wins"><p id="keep_score">Wins <p id="count">0</p></p></div>'),
+        loss = $('<div id="losses"><p id="keep_score">Losses <p id="count">0</p></p></div>'),
+        draw = $('<div id="draws"><p id="keep_score">Draws <p id="count">0</p></p></div>');
 
     $('.score').append(score, win, loss, draw);
   }

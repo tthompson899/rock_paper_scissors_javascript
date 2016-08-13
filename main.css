@@ -62,4 +62,24 @@
       width: 162px;
       margin: 71px 24px 0px 10px;
       margin-top: -3px;
+      border-radius: 14px; 
+    }
+      #wins{
+        background-color: #00B200;
+      }
+      #losses{
+        background-color: red;
+      }
+      #draws{
+        background-color: #ee964e;
+      }
+    #keep_score{
+      margin-left: 44px;
+      margin-top: 24px;
+      font-size: 20pt;
+    }
+    #count{
+      font-size: 20pt;
+      margin-left: 75px;
+      margin-top: 19px;
     }
