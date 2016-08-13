@@ -20,6 +20,8 @@ $(document).ready(function(){
       }
       else if (sec == 0 && min == 0) {
         $('.warning').hide(); // hide warning once countdown complete
+        // Hide options div when times up or game over
+        $('.options').hide();
       }
 
       if(sec <= 0){ // No more Seconds...
@@ -44,11 +46,27 @@ $(document).ready(function(){
   });
 
   function options(){
-    var rock = $('<button id="rock">Rock</button>'),
+    var decide = $('<h2 class="decide">Make Your Choice:</h3>'),
+        rock = $('<button id="rock">Rock</button>'),
         paper = $('<button id="paper">Paper</button>'),
         scissors = $('<button id="scissors">Scissors</button>');
 
-    $('.options').append(rock, paper, scissors);
+    $('.options').append(decide, rock, paper, scissors);
+    user_choice();
+  }
+
+  function user_choice(){
+    // Find the id of button the user clicked
+    $('button').click(function(){
+      var chosen = this.id;
+      robot_choice();
+    })
+  }
+
+  function robot_choice(){
+    choices = ['rock', 'paper', 'scissors'];
+
+    
   }
 
 });
