@@ -84,8 +84,51 @@
       margin-top: 19px;
     }
 
-  .who_won{
-    font-size: 30pt;
-    margin-left: 209px;
-    color: blue; 
+.who_won{
+  font-size: 30pt;
+  margin-left: 209px;
+  color: blue;
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+    width: 100%;
   }
+
+  h1{
+    margin-left: 73px;
+  }
+
+  h3{
+    margin-left: 183px;
+  }
+  .user_input{
+    margin-left: 136px;
+  }
+
+  .score{
+    margin-left: 75px;
+  }
+}
+
+@media only screen and (max-device-width: 480px){
+  .container{
+    width: 100%;
+  }
+
+  .score, #score{
+    width: 100%;
+  }
+
+  #score{
+   margin-left: 39px;
+ }
+ .decide{
+   margin-left: 136px;
+ }
+ .options{
+   width: 25px;
+   height: 501px;
+   margin-left: 35px;
+ }
+}

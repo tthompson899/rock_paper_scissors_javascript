@@ -2,24 +2,24 @@ $(document).ready(function(){
   // set the time to zero:
   $('.time_holder').text("Minutes: " + 0 + " Seconds: " + 0);
 
-  // set the score for each outcome to zero
-  winner = 0;
-  loser = 0;
-  drawer = 0;
+    // ***MAKE A FUNCTION: set the score for each outcome to zero & append them to .score
+    winner = 0;
+    loser = 0;
+    drawer = 0;
 
-  var score = $('<h1 id="score">SCORE</h1>'),
-      win = $('<div id="wins"><p id="keep_score">Wins <p id="count_win">'+ winner + '</p></p></div>'),
-      loss = $('<div id="losses"><p id="keep_score">Losses <p id="count_lose">' + loser + '</p></p></div>'),
-      draw = $('<div id="draws"><p id="keep_score">Draws <p id="count_draw">' + drawer + '</p></p></div>');
+    var score = $('<h1 id="score">SCORE</h1>'),
+        win = $('<div id="wins"><p id="keep_score">Wins <p id="count_win">'+ winner + '</p></p></div>'),
+        loss = $('<div id="losses"><p id="keep_score">Losses <p id="count_lose">' + loser + '</p></p></div>'),
+        draw = $('<div id="draws"><p id="keep_score">Draws <p id="count_draw">' + drawer + '</p></p></div>');
 
-  $('.score').append(score, win, loss, draw);
+    $('.score').append(score, win, loss, draw);
 
   // User input time, .click is triggered
   $('#play_game').click(function(){
     options(); // get the choice of the user
 
-    var min = $('#mins').val();
-    var sec = $('#secs').val();
+    min = $('#mins').val();
+    sec = $('#secs').val();
 
     var clock = setInterval(getTime, 1000);
 
@@ -36,15 +36,36 @@ $(document).ready(function(){
         $('.options').hide();
         $('.robot_decision').hide();
 
+        // decide if who won, who lost
         if(winner > loser){
           $('.who_won').append("You Won!");
         }
-        else if(loser > winner){
-          $('.who_won').append("You Lost!");
+        else {
+          $('.who_won').append("Robot Won!");
         }
-        else{
-          $('.who_won').append("It's a Tie!");
-        }
+
+        $('.restart_game').html('<button class="restart">Restart Game</button>');
+        $('.restart').click(function(){
+          $('.who_won').hide();
+          //
+          min = $('#mins').val();
+          sec = $('#secs').val();
+
+          //reset score to zero
+          winner = 0;
+          loser = 0;
+          drawer = 0;
+
+          $('#count_win').text(winner);
+          $('#count_lose').text(loser);
+          $('#count_draw').text(drawer);
+
+          // ****This is where it fails --- Time gets into negatives, options() never shows up (May need to make these into functions so I can call them here.)
+          var play_again = setInterval(getTime, 1000);
+          // options();
+
+        });
+
       }
 
       if(sec <= 0){ // No more Seconds...
@@ -64,8 +85,8 @@ $(document).ready(function(){
     }
 
     // Clear the input fields
-    $('#mins').val('');
-    $('#secs').val('');
+    // $('#mins').val('');
+    // $('#secs').val('');
   });
 
   function options(){
@@ -118,4 +139,5 @@ $(document).ready(function(){
       $('#count_draw').text(drawer);
     }
   }
+
 });
