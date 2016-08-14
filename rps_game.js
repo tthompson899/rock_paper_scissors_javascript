@@ -18,10 +18,14 @@ $(document).ready(function(){
   $('#play_game').click(function(){
     options(); // get the choice of the user
 
+    play_game();
+  });
+
+  function play_game(){
     min = $('#mins').val();
     sec = $('#secs').val();
 
-    var clock = setInterval(getTime, 1000);
+    clock = setInterval(getTime, 1000);
 
     function getTime(){
       sec -= 1; // decrease the seconds
@@ -29,43 +33,6 @@ $(document).ready(function(){
       // Warn if 10 seconds remaining
       if(sec == 10 && min == 0){
          $('.warning').text("10 SECONDS REMAINING!");
-      }
-      else if (sec == 0 && min == 0) {
-        $('.warning').hide(); // hide warning once countdown complete
-        // Hide options div when times up or game over
-        $('.options').hide();
-        $('.robot_decision').hide();
-
-        // decide if who won, who lost
-        if(winner > loser){
-          $('.who_won').append("You Won!");
-        }
-        else {
-          $('.who_won').append("Robot Won!");
-        }
-
-        $('.restart_game').html('<button class="restart">Restart Game</button>');
-        $('.restart').click(function(){
-          $('.who_won').hide();
-          //
-          min = $('#mins').val();
-          sec = $('#secs').val();
-
-          //reset score to zero
-          winner = 0;
-          loser = 0;
-          drawer = 0;
-
-          $('#count_win').text(winner);
-          $('#count_lose').text(loser);
-          $('#count_draw').text(drawer);
-
-          // ****This is where it fails --- Time gets into negatives, options() never shows up (May need to make these into functions so I can call them here.)
-          var play_again = setInterval(getTime, 1000);
-          // options();
-
-        });
-
       }
 
       if(sec <= 0){ // No more Seconds...
@@ -75,6 +42,22 @@ $(document).ready(function(){
         }
         else{// no more time left
           clearInterval(clock);
+
+          $('.warning').hide(); // hide warning once countdown complete
+          // Hide options div when times up or game over
+          $('.options').hide();
+          $('.robot_decision').hide();
+
+          // decide if who won, who lost
+          if(winner > loser){
+            $('.who_won').append("You Won!");
+          }
+          else {
+            $('.who_won').append("Robot Won!");
+          }
+
+          // Restart function to start the game again
+          go_play();
         }
       }
       else if(min == ''){ // if user did not input min, set to zero
@@ -84,10 +67,7 @@ $(document).ready(function(){
       $('.time_holder').text("Minutes: " + min + " Seconds: " + sec);
     }
 
-    // Clear the input fields
-    // $('#mins').val('');
-    // $('#secs').val('');
-  });
+  }
 
   function options(){
     var decide = $('<h2 class="decide">Make Your Choice:</h3>'),
@@ -140,4 +120,17 @@ $(document).ready(function(){
     }
   }
 
+  function go_play(){
+    $('.restart_game').html("<button class='restart'>Restart Game</button>");
+
+    $('.restart').click(function(){
+      $('.restart_game').hide();
+      $('.who_won').hide();
+      
+      $('.options').show();
+      $('.robot_decision').show();
+
+      play_game();
+    })
+  }
 });
