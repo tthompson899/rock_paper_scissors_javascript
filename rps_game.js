@@ -33,6 +33,7 @@ $(document).ready(function(){
       // Warn if 10 seconds remaining
       if(sec == 10 && min == 0){
          $('.warning').text("10 SECONDS REMAINING!");
+         $('.warning').show();
       }
 
       if(sec <= 0){ // No more Seconds...
@@ -122,11 +123,14 @@ $(document).ready(function(){
 
   function go_play(){
     $('.restart_game').html("<button class='restart'>Restart Game</button>");
+    $('.restart_game').show(); 
 
     $('.restart').click(function(){
+      $('.time_holder').text("Minutes: " + 0 + " Seconds: " + 0);
+
       $('.restart_game').hide();
       $('.who_won').hide();
-      
+
       $('.options').show();
       $('.robot_decision').show();
 
