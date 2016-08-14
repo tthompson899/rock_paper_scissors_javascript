@@ -1,7 +1,17 @@
+body{
+  height: 780px;
+  background-image: url('https://thenypost.files.wordpress.com/2014/06/rock-paper.jpg?quality=90&strip=all&w=664&h=441&crop=1');
+  /*background-image: url('http://i.telegraph.co.uk/multimedia/archive/03015/RockPaperScissors_3015010b.jpg');*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .container{
   height: 400px;
   width: 600px;
   margin: 0 auto;
+
 }
   h1{
     color: purple;

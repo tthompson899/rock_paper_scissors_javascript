@@ -2,22 +2,21 @@ $(document).ready(function(){
   // set the time to zero:
   $('.time_holder').text("Minutes: " + 0 + " Seconds: " + 0);
 
-    // ***MAKE A FUNCTION: set the score for each outcome to zero & append them to .score
-    winner = 0;
-    loser = 0;
-    drawer = 0;
+  // ***MAKE A FUNCTION: set the score for each outcome to zero & append them to .score
+  winner = 0;
+  loser = 0;
+  drawer = 0;
 
-    var score = $('<h1 id="score">SCORE</h1>'),
-        win = $('<div id="wins"><p id="keep_score">Wins <p id="count_win">'+ winner + '</p></p></div>'),
-        loss = $('<div id="losses"><p id="keep_score">Losses <p id="count_lose">' + loser + '</p></p></div>'),
-        draw = $('<div id="draws"><p id="keep_score">Draws <p id="count_draw">' + drawer + '</p></p></div>');
+  var score = $('<h1 id="score">SCORE</h1>'),
+      win = $('<div id="wins"><p id="keep_score">Wins <p id="count_win">'+ winner + '</p></p></div>'),
+      loss = $('<div id="losses"><p id="keep_score">Losses <p id="count_lose">' + loser + '</p></p></div>'),
+      draw = $('<div id="draws"><p id="keep_score">Draws <p id="count_draw">' + drawer + '</p></p></div>');
 
     $('.score').append(score, win, loss, draw);
 
   // User input time, .click is triggered
   $('#play_game').click(function(){
     options(); // get the choice of the user
-
     play_game();
   });
 
@@ -32,8 +31,7 @@ $(document).ready(function(){
 
       // Warn if 10 seconds remaining
       if(sec == 10 && min == 0){
-         $('.warning').text("10 SECONDS REMAINING!");
-         $('.warning').show();
+         $('.warning').text("10 SECONDS REMAINING!").show();
       }
 
       if(sec <= 0){ // No more Seconds...
@@ -51,10 +49,10 @@ $(document).ready(function(){
 
           // decide if who won, who lost
           if(winner > loser){
-            $('.who_won').append("You Won!");
+            $('.who_won').append("You Won!").show();
           }
           else {
-            $('.who_won').append("Robot Won!");
+            $('.who_won').append("Robot Won!").show();
           }
 
           // Restart function to start the game again
@@ -122,18 +120,21 @@ $(document).ready(function(){
   }
 
   function go_play(){
-    $('.restart_game').html("<button class='restart'>Restart Game</button>");
-    $('.restart_game').show(); 
+    $('.restart_game').html("<button class='restart'>Restart Game</button>").show();
 
     $('.restart').click(function(){
-      $('.time_holder').text("Minutes: " + 0 + " Seconds: " + 0);
-
       $('.restart_game').hide();
       $('.who_won').hide();
 
       $('.options').show();
       $('.robot_decision').show();
 
+      winner = 0;
+      loser = 0;
+      drawer = 0;
+      $('#count_win').text(winner);
+      $('#count_lose').text(loser);
+      $('#count_draw').text(drawer);
       play_game();
     })
   }
