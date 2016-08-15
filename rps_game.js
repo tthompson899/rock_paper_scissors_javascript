@@ -45,6 +45,7 @@ $(document).ready(function(){
           $('.warning').hide(); // hide warning once countdown complete
           // Hide options div when times up or game over
           $('.options').hide();
+
           $('.robot_decision').hide();
 
           // decide if who won, who lost
@@ -52,9 +53,14 @@ $(document).ready(function(){
             announce_winner = "You Win!"; // set variable to hold the value of who won
             $('.who_won').html(announce_winner);
           }
-          else {
+          else if(winner < loser){
             announce_winner = "Robot Wins!";
             $('.who_won').html(announce_winner);
+          }
+          else{
+            announce_winner = "It's a Draw!"
+            $('.who_won').html(announce_winner);
+
           }
 
           // Restart function to start the game again
@@ -71,7 +77,8 @@ $(document).ready(function(){
   }
 
   function options(){
-    var decide = $('<h2 class="decide">Make Your Choice:</h3>'),
+    // declare variable holding html items to append the options for the user
+       decide = $('<h2 class="decide">Make Your Choice:</h3>'),
         rock = $('<button id="rock">Rock</button>'),
         paper = $('<button id="paper">Paper</button>'),
         scissors = $('<button id="scissors">Scissors</button>');
@@ -92,7 +99,7 @@ $(document).ready(function(){
     var choices = ['rock', 'paper', 'scissors'];
 
     robot_chosen = choices[Math.floor(Math.random()*choices.length)]; // robot chose random value from choices array
-    $('.robot_decision').html("<h2>The Robot's Choice is: " + robot_chosen + "</h2>");
+    $('.robot_decision').html("<h2>The Robot's Choice is: " + robot_chosen + "</h2>").show(); // must show because it's hid after the game ends
 
     game_score();
   }
@@ -129,14 +136,15 @@ $(document).ready(function(){
       announce_winner = ''; // reset winner to blank string
       $('.who_won').html(announce_winner); // output the blank string so next winner can be shown after game restarted
       $('.options').show();
-      $('.robot_decision').show();
 
+      // reset the score to zero
       winner = 0;
       loser = 0;
       drawer = 0;
       $('#count_win').text(winner);
       $('#count_lose').text(loser);
       $('#count_draw').text(drawer);
+
       play_game();
     })
   }
