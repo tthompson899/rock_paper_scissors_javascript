@@ -49,10 +49,12 @@ $(document).ready(function(){
 
           // decide if who won, who lost
           if(winner > loser){
-            $('.who_won').append("You Won!").show();
+            announce_winner = "You Win!"; // set variable to hold the value of who won
+            $('.who_won').html(announce_winner);
           }
           else {
-            $('.who_won').append("Robot Won!").show();
+            announce_winner = "Robot Wins!";
+            $('.who_won').html(announce_winner);
           }
 
           // Restart function to start the game again
@@ -124,8 +126,8 @@ $(document).ready(function(){
 
     $('.restart').click(function(){
       $('.restart_game').hide();
-      $('.who_won').hide();
-
+      announce_winner = ''; // reset winner to blank string
+      $('.who_won').html(announce_winner); // output the blank string so next winner can be shown after game restarted
       $('.options').show();
       $('.robot_decision').show();
 
