@@ -13,7 +13,7 @@ body{
 
 }
   h1{
-    color: purple;
+    color: #392F43;
   }
 
   .timer{
@@ -78,23 +78,23 @@ body{
       border-radius: 14px;
     }
       #wins{
-        background-color: #00B200;
+        background-color: #8FD8A0;
       }
       #losses{
-        background-color: red;
+        background-color: #C0504D;
       }
       #draws{
-        background-color: #ee964e;
+        background-color: #C3ADB0;
       }
     #keep_score{
-      margin-left: 44px;
       margin-top: 24px;
       font-size: 20pt;
+      text-align: center;
     }
     #count_win, #count_lose, #count_draw{
       font-size: 20pt;
-      margin-left: 75px;
       margin-top: 19px;
+      text-align: center;
     }
 
 .who_won{
