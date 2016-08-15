@@ -1,7 +1,6 @@
 body{
   height: 780px;
   background-image: url('https://thenypost.files.wordpress.com/2014/06/rock-paper.jpg?quality=90&strip=all&w=664&h=441&crop=1');
-  /*background-image: url('http://i.telegraph.co.uk/multimedia/archive/03015/RockPaperScissors_3015010b.jpg');*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -35,14 +34,18 @@ body{
     margin-top: 25px;
     margin-left: -50px;
   }
+    .option_img{
+      width: 63px;
+      height: 48px;
+    }
     #rock, #paper, #scissors{
       margin-left: 41px;
       margin-top: 65px;
-      height: 59px;
+      height: 72px;
       width: 194px;
       position: relative;
       border-radius: 10px;
-      background-color: green;
+      background: linear-gradient(#646568, #8a8b8f);
       font-size: 24pt;
       font-weight: 600;
     }
