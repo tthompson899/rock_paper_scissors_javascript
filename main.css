@@ -173,9 +173,14 @@ body{
     }
 
   .options{
-    width: 18%;
-    margin-left: 5%;
+    width: 97%;
+    margin-left: 4%;
   }
+
+    .decide{
+      margin-left: 14%;
+    }
+
     #rock, #paper, #scissors{
       width: 22%;
       height: 29%;
@@ -200,8 +205,8 @@ body{
     height: 53%;
     width: 24%;
   }
- .decide{
-   margin-left: 14%;
- }
+.restart_game{
+  text-align: center;
+}
 
 }
