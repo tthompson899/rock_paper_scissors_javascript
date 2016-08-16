@@ -1,0 +1,101 @@
+/* Adjusting screen sizes based on resizing screen */
+@media (min-width: 773px) and (max-width: 800px) {
+  body{
+    width: 95%;
+    background-image: url('../images/horizontal_bg.jpg');
+  }
+  .container{
+    width: 100%;
+  }
+
+  h1{
+    margin-left: 9%;
+  }
+
+  h3{
+    margin-left: 7%;
+  }
+  .user_input{
+    text-align: center;
+  }
+  h3, .timer, .decide, .robot_decision{
+    text-align: center;
+
+  }
+  .options{
+    margin-left: 1%;
+    margin-top: 14%;
+  }
+
+  .score{
+    margin-left: 12%;
+    margin-top: 14%;
+  }
+
+  .who_won{
+    margin-left: 5%;
+  }
+
+  .restart_game{
+    margin-left: 45%;
+  }
+}
+
+@media (min-width: 489px) and (max-width: 600px){
+  body{
+    width: 90%;
+    min-height: 100%;
+    background-image: url('../images/horizontal_bg.jpg');
+  }
+
+  .container{
+    width: 100%;
+  }
+    h1{
+      font-size: 21pt;
+      text-align: center;
+    }
+    h3{
+      text-align: center;
+    }
+  .user_input{
+    margin-left: 5%;
+  }
+    #play_game{
+      margin-top: 5%;
+    }
+
+  .options{
+    width: 97%;
+    margin-left: 4%;
+  }
+
+    #rock, #paper, #scissors{
+      width: 22%;
+      height: 29%;
+    }
+    .option_img{
+      width: 90%;
+    }
+  .robot_decision{
+    width: 106%;
+    text-align: center;
+  }
+
+  .score{
+    width: 100%;
+    margin-left: 6%;
+  }
+
+  #score{
+   margin-left: -11%;
+ }
+  #wins, #losses, #draws{
+    height: 53%;
+    width: 24%;
+  }
+.restart_game{
+  margin-left: 215px;
+}
+
+}

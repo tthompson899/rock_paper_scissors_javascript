@@ -1,0 +1,106 @@
+body{
+  height: 780px;
+  background-image: url('../images/full_screen_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.container{
+  height: 400px;
+  width: 600px;
+  margin: 0 auto;
+
+}
+  .welcome{
+    color: #c9c7dd;
+    text-align: center;
+  }
+
+  .timer{
+    width: 246px;
+    height: 100px;
+    margin: 0 auto;
+  }
+    .time_holder{
+      margin-left: 14px;
+      text-align: center;
+    }
+    .warning{
+      color: red;
+    }
+
+  .options{
+    width: 743px;
+    height: 200px;
+    margin-top: 25px;
+    margin-left: -50px;
+  }
+    .option_img{
+      width: 63px;
+      height: 48px;
+    }
+    #rock, #paper, #scissors{
+      margin-left: 41px;
+      margin-top: 65px;
+      height: 72px;
+      width: 194px;
+      position: relative;
+      border-radius: 10px;
+      background: linear-gradient(#646568, #8a8b8f);
+      font-size: 24pt;
+      font-weight: 600;
+    }
+  h3, .decide, .robot_decision, .user_input, .warning{
+    text-align: center;
+  }
+  /* div to hold score divs */
+  .score{
+    width: 600px;
+    height: 250px;
+    margin-left: 36px;
+  }
+    /* Heading for .score div */
+    #score{
+      margin-left: 212px;
+      color: #6F6AB3;
+    }
+    #wins, #losses, #draws{
+      display: inline-block;
+      border: 2px solid black;
+      height: 157px;
+      width: 162px;
+      margin: 71px 24px 0px 10px;
+      margin-top: -3px;
+      border-radius: 14px;
+    }
+      #wins{
+        background-color: #8FD8A0;
+      }
+      #losses{
+        background-color: #C0504D;
+      }
+      #draws{
+        background-color: #C3ADB0;
+      }
+    #keep_score{
+      margin-top: 24px;
+      font-size: 20pt;
+      text-align: center;
+    }
+    #count_win, #count_lose, #count_draw{
+      font-size: 20pt;
+      margin-top: 19px;
+      text-align: center;
+    }
+
+.who_won{
+  font-size: 30pt;
+  color: blue;
+  text-align: center;
+}
+
+.restart_game{
+  margin-left: 258px;
+}
