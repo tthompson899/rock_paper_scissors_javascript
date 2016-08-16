@@ -4,6 +4,7 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  min-height: 100%;
 }
 
 .container{
@@ -13,7 +14,7 @@ body{
 
 }
   h1{
-    color: #392F43;
+    color: #c9c7dd;
   }
 
   .timer{
@@ -67,6 +68,7 @@ body{
     /* Heading for .score div */
     #score{
       margin-left: 235px;
+      color: #6F6AB3;
     }
     #wins, #losses, #draws{
       display: inline-block;
@@ -104,6 +106,9 @@ body{
 }
 
 @media screen and (max-width: 768px) {
+  body{
+    min-height: 100%;
+  }
   .container{
     width: 100%;
   }
@@ -113,10 +118,14 @@ body{
   }
 
   h3{
-    margin-left: 183px;
+    margin-left: 68px;
+    text-align: center;
   }
   .user_input{
-    margin-left: 136px;
+    margin-left: 100px;
+  }
+  .timer{
+    margin-left: 91px;
   }
 
   .score{
@@ -124,7 +133,14 @@ body{
   }
 }
 
-@media only screen and (max-device-width: 480px){
+@media only screen and (max-width: 480px){
+  body{
+    width: 317px;
+    min-height: 100%;
+  }
+  h1{
+    font-size: 12pt;
+  }
   .container{
     width: 100%;
   }
@@ -143,5 +159,6 @@ body{
    width: 25px;
    height: 501px;
    margin-left: 35px;
+
  }
 }
