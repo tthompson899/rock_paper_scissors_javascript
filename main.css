@@ -1,6 +1,6 @@
 body{
   height: 780px;
-  background-image: url('https://thenypost.files.wordpress.com/2014/06/rock-paper.jpg?quality=90&strip=all&w=664&h=441&crop=1');
+  background-image: url('images/full_screen_bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -108,6 +108,8 @@ body{
 @media screen and (max-width: 768px) {
   body{
     min-height: 100%;
+    background-image: url('images/horizontal_bg.jpg');
+
   }
   .container{
     width: 100%;
@@ -137,6 +139,7 @@ body{
   body{
     width: 317px;
     min-height: 100%;
+    background-image: url('images/horizontal_bg.jpg');
   }
   h1{
     font-size: 12pt;
