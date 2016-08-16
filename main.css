@@ -101,15 +101,14 @@ body{
 
 .who_won{
   font-size: 30pt;
-  margin-left: 209px;
   color: blue;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
   body{
     min-height: 100%;
     background-image: url('images/horizontal_bg.jpg');
-
   }
   .container{
     width: 100%;
@@ -121,17 +120,30 @@ body{
 
   h3{
     margin-left: 68px;
-    text-align: center;
   }
   .user_input{
-    margin-left: 100px;
+    margin-left: 176px;
   }
-  .timer{
-    margin-left: 91px;
+  h3, .timer, .decide, .robot_decision{
+    text-align: center;
+
+  }
+  .options{
+    margin-left: 1px;
+    margin-top: 81px;
   }
 
   .score{
     margin-left: 75px;
+    margin-top: 79px;
+  }
+
+  .who_won{
+    margin-left: 7px;
+  }
+  
+  .restart_game{
+    margin-left: 324px;
   }
 }
 
