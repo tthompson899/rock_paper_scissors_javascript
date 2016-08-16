@@ -1,3 +1,9 @@
+@media (min-width: 801px) and (max-width: 1277px){
+  body{
+    width: 97%;
+  }
+}
+
 /* Adjusting screen sizes based on resizing screen */
 @media (min-width: 773px) and (max-width: 800px) {
   body{
@@ -8,7 +14,7 @@
     width: 100%;
   }
 
-  h1{
+  .welcome{
     margin-left: 9%;
   }
 
@@ -41,9 +47,14 @@
   }
 }
 
+@media (min-width: 601px) and (max-width: 772px){
+
+}
+
 @media (min-width: 489px) and (max-width: 600px){
   body{
     width: 90%;
+    /* is min-height needed? */
     min-height: 100%;
     background-image: url('../images/horizontal_bg.jpg');
   }
@@ -51,7 +62,7 @@
   .container{
     width: 100%;
   }
-    h1{
+    .welcome{
       font-size: 21pt;
       text-align: center;
     }
@@ -94,8 +105,60 @@
     height: 53%;
     width: 24%;
   }
-.restart_game{
-  margin-left: 215px;
+  .restart_game{
+    margin-left: 40%;
+  }
+
 }
 
+@media (min-width: 400px) and (max-width: 488px){
+  body{
+    width: 98%;
+    background-image: url('../images/horizontal_bg.jpg');
+    background-repeat: repeat;
+  }
+  .container{
+    width: 100%;
+  }
+
+  .user_input{
+    width: 35%;
+    margin-left: 31%;
+  }
+
+  .time_holder{
+    margin-right: 7%;
+  }
+  .decide{
+    margin-left: 13%;
+  }
+
+  .options{
+    width: 100%;
+    margin-left: -6%;
+  }
+    #rock, #paper, #scissors{
+      width: 22%;
+      height: 29%;
+    }
+    .option_img{
+      width: 90%;
+    }
+
+  .score{
+    width: 90%;
+    height: 78%;
+
+  }
+    #score{
+      margin-left: 31%;
+    }
+    #wins, #losses, #draws{
+      width: 22%;
+      height: 48%;
+      display: inline-block;
+    }
+  .restart_game{
+    margin-left: 38%;
+  }
 }
