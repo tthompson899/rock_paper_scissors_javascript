@@ -54,9 +54,8 @@
 @media (min-width: 489px) and (max-width: 600px){
   body{
     width: 90%;
-    /* is min-height needed? */
-    min-height: 100%;
     background-image: url('../images/horizontal_bg.jpg');
+    background-repeat: repeat;
   }
 
   .container{
@@ -76,6 +75,9 @@
       margin-top: 5%;
     }
 
+  .warning{
+    margin-left: 10%;
+  }
   .options{
     width: 97%;
     margin-left: 4%;
@@ -99,7 +101,7 @@
   }
 
   #score{
-   margin-left: -11%;
+   margin-left: 35%;
  }
   #wins, #losses, #draws{
     height: 53%;
