@@ -1,4 +1,4 @@
-@media (min-width: 801px) and (max-width: 1277px){
+@media (min-width: 800px) and (max-width: 1277px){
   body{
     width: 97%;
   }
@@ -35,8 +35,11 @@
 
   .score{
     margin-left: 12%;
-    margin-top: 14%;
+    margin-top: 4%;
   }
+    #score{
+      margin-left: 39%;
+    }
 
   .who_won{
     margin-left: 5%;
@@ -47,8 +50,70 @@
   }
 }
 
-@media (min-width: 601px) and (max-width: 772px){
+@media (min-width: 660px) and (max-width: 772px){
+  body{
+    width: 90%;
+    height: 100%;
+    background-image: url('../images/horizontal_bg.jpg');
+    background-repeat: repeat;
+  }
+  .warning{
+    margin-left: 16%;
+  }
+  .options{
+    width: 92%;
+    margin-left: 8%;
+  }
+    #rock, #paper, #scissors{
+      width: 22%;
+      height: 29%;
+    }
+    .option_img{
+      width: 90%;
+    }
+  .who_won{
+    margin-left: 7%;
+  }
 
+  .restart_game{
+    margin-left: 46%;
+  }
+  #score{
+    margin-left: 39%;
+  }
+}
+
+@media (min-width: 630px) and (max-width: 650px) {
+  body{
+    width: 90%;
+    background-image: url('../images/horizontal_bg.jpg');
+  }
+  .options{
+    width: 100%;
+    margin-left: 0%;
+  }
+    #rock, #paper, #scissors{
+      width: 22%;
+      height: 29%;
+    }
+    .option_img{
+      width: 90%;
+    }
+  .score{
+    width: 97%;
+    margin-left: 4%;
+  }
+
+    #score{
+     margin-left: 35%;
+   }
+    #wins, #losses, #draws{
+      height: 53%;
+      width: 24%;
+    }
+  .restart_game{
+    margin-left: 39%;
+  }
 }
 
 @media (min-width: 489px) and (max-width: 600px){
@@ -164,3 +229,24 @@
     margin-left: 38%;
   }
 }
+
+/* Add styling for iphone5 and 6 screens */
+/*@media (min-width: 320px) and (min-width: 370px){
+  body{
+    width: 100%;
+    background-image: url('../images/horizontal_bg.jpg');
+    background-repeat: repeat;
+  }
+
+  .options{
+    width: 100%;
+    margin-left: 1%;
+  }
+    #rock, #paper, #scissors{
+      width: 22%;
+      height: 29%;
+    }
+    .option_img{
+      width: 90%;
+    }
+}*/
