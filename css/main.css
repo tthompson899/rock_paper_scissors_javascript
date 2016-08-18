@@ -17,6 +17,21 @@ body{
     color: #c9c7dd;
     text-align: center;
   }
+  h3{
+    color: #d8c3d8;
+    font-size: 18pt;
+  }
+  label{
+    font-size: 12pt;
+  }
+  #play_game{
+    background-color: black;
+    color: #8a8583;
+    width: 60px;
+    border: 2px solid;
+    font-size: 12pt;
+    font-weight: bold;
+  }
 
   .timer{
     width: 246px;
@@ -26,6 +41,7 @@ body{
     .time_holder{
       margin-left: 14px;
       text-align: center;
+      color: #26262D; 
     }
     .warning{
       color: red;
@@ -63,7 +79,7 @@ body{
   }
     /* Heading for .score div */
     #score{
-      margin-left: 212px;
+      margin-left: 226px;
       color: #6F6AB3;
     }
     #wins, #losses, #draws{
@@ -110,5 +126,5 @@ body{
     background-color: #84acb4;
     border: 1px solid #d8e3d9;
     font-size: medium;
-    margin-left: 1px; 
+    margin-left: 1px;
   }

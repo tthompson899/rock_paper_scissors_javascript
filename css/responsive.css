@@ -230,14 +230,14 @@
   }
 }
 
-/* Add styling for iphone5 and 6 screens */
-/*@media (min-width: 320px) and (min-width: 370px){
+/* Add styling for iphone5 and 6 screens  and (min-width: 370px)*/
+@media only screen (min-width: 320px) {
   body{
-    width: 100%;
+    /*width: 100%;
     background-image: url('../images/horizontal_bg.jpg');
-    background-repeat: repeat;
+    background-repeat: no-repeat;*/
   }
-
+/*
   .options{
     width: 100%;
     margin-left: 1%;
@@ -248,5 +248,5 @@
     }
     .option_img{
       width: 90%;
-    }
-}*/
+    }*/
+}
