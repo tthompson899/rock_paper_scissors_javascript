@@ -97,10 +97,18 @@ body{
 
 .who_won{
   font-size: 30pt;
-  color: blue;
+  color: #0080FF;
   text-align: center;
 }
 
 .restart_game{
   margin-left: 258px;
 }
+  .restart{
+    border-radius: 6px;
+    height: 32px;
+    background-color: #84acb4;
+    border: 1px solid #d8e3d9;
+    font-size: medium;
+    margin-left: 1px; 
+  }

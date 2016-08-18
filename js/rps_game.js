@@ -79,9 +79,9 @@ $(document).ready(function(){
   function options(){
     // declare variable holding html items to append the options for the user
        decide = $('<h2 class="decide">Make Your Choice:</h3>'),
-        rock = $('<button id="rock"><img class="option_img" src="https://thumbs.dreamstime.com/t/rock-stone-boulder-isolated-black-background-42172106.jpg" /></button>'),
-        paper = $('<button id="paper"><img class="option_img" src="http://shop.aph.org/wcsstore/APHConsumerDirect/images/catalog/products_large/1-04560-00_Embossed_Writing_Paper_G.jpg" /></button>'),
-        scissors = $('<button id="scissors"><img class="option_img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Scissors_icon_black.svg/2000px-Scissors_icon_black.svg.png" /></button>');
+        rock = $('<button id="rock"><img class="option_img" src="images/rock.jpg" /></button>'),
+        paper = $('<button id="paper"><img class="option_img" src="images/paper.jpg" /></button>'),
+        scissors = $('<button id="scissors"><img class="option_img" src="images/scissors.png" /></button>');
 
     $('.options').append(decide, rock, paper, scissors);
     user_choice();
