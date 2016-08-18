@@ -243,14 +243,54 @@
   }
 }
 
-/* Add styling for iphone5 and 6 screens  and (min-width: 370px)*/
-@media only screen (min-width: 320px) {
+@media (min-width: 375px){
   body{
-    /*width: 100%;
     background-image: url('../images/horizontal_bg.jpg');
-    background-repeat: no-repeat;*/
+    background-size: 100%;
+    margin-bottom: 117%;
   }
-/*
+  .container{
+    width: 188%;
+  }
+  .options{
+    width: 100%;
+    margin-left: 5%;
+  }
+    #rock, #paper, #scissors{
+      width: 22%;
+      height: 29%;
+    }
+    .option_img{
+      width: 90%;
+    }
+
+  .score{
+    width: 87%;
+    margin-left: 12%;
+    margin-top: 20%;
+  }
+
+    #score{
+      margin-left: 31%;
+    }
+    #wins, #losses, #draws{
+      width: 24%;
+      height: 57%;
+      display: inline-block;
+    }
+}
+
+/* Styling for screens at (min-width: 320px)*/
+@media (min-width: 320px) {
+  body{
+    background-image: url('../images/horizontal_bg.jpg');
+    background-size: 281%;
+    margin-bottom: 91%;
+    margin-left: 15%;
+  }
+  .container{
+    width: 188%;
+  }
   .options{
     width: 100%;
     margin-left: 1%;
@@ -261,5 +301,19 @@
     }
     .option_img{
       width: 90%;
-    }*/
+    }
+
+  .score{
+    width: 87%;
+    margin-left: 10%;
+  }
+
+    #score{
+      margin-left: 33%;
+    }
+    #wins, #losses, #draws{
+      width: 24%;
+      height: 57%;
+      display: inline-block;
+    }
 }
