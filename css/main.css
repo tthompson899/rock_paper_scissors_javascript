@@ -28,7 +28,8 @@ body{
     background-color: black;
     color: #8a8583;
     width: 60px;
-    border: 2px solid;
+    border: 2px;
+    border-radius: 4px;
     font-size: 12pt;
     font-weight: bold;
   }
@@ -41,7 +42,8 @@ body{
     .time_holder{
       margin-left: 14px;
       text-align: center;
-      color: #26262D; 
+      color: #26262D;
+      font-size: 16pt;
     }
     .warning{
       color: red;
@@ -68,9 +70,17 @@ body{
       font-size: 24pt;
       font-weight: 600;
     }
-  h3, .decide, .robot_decision, .user_input, .warning{
-    text-align: center;
+  h3{
+    color: #26262D;
   }
+  h3, .decide, .robot_decision, .user_input, .warning{
+    /*text-align: center;*/
+    margin-left: 83px; 
+  }
+    /* text for robot's decision */
+    h2{
+      text-align: center;
+    }
   /* div to hold score divs */
   .score{
     width: 600px;
@@ -113,18 +123,20 @@ body{
 
 .who_won{
   font-size: 30pt;
-  color: #0080FF;
-  text-align: center;
+  color: #347798;
+  margin-left: 231px;
 }
 
 .restart_game{
   margin-left: 258px;
 }
   .restart{
-    border-radius: 6px;
-    height: 32px;
+    border-radius: 8px;
+    height: 55px;
+    width: 155px;
     background-color: #84acb4;
-    border: 1px solid #d8e3d9;
-    font-size: medium;
-    margin-left: 1px;
+    color: black;
+    border: 2px solid;
+    font-size: 15pt;
+    font-weight: 800;
   }

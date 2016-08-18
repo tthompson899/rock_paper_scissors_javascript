@@ -72,11 +72,11 @@
       width: 90%;
     }
   .who_won{
-    margin-left: 7%;
+    margin-left: 40%;
   }
 
   .restart_game{
-    margin-left: 46%;
+    margin-left: 42%;
   }
   #score{
     margin-left: 39%;
@@ -134,14 +134,14 @@
       text-align: center;
     }
   .user_input{
-    margin-left: 5%;
+    margin-left: 10%;
   }
     #play_game{
       margin-top: 5%;
     }
 
   .warning{
-    margin-left: 10%;
+    margin-left: 13%;
   }
   .options{
     width: 97%;
@@ -156,9 +156,12 @@
       width: 90%;
     }
   .robot_decision{
-    width: 106%;
+    width: 92%;
     text-align: center;
   }
+    h2{
+      margin-right: 19%;
+    }
 
   .score{
     width: 100%;
@@ -172,8 +175,11 @@
     height: 53%;
     width: 24%;
   }
+  .who_won{
+    margin-left: 30%;
+  }
   .restart_game{
-    margin-left: 40%;
+    margin-left: 36%;
   }
 
 }
