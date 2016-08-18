@@ -75,14 +75,11 @@ body{
       font-size: 24pt;
       font-weight: 600;
     }
-  .decide{
-    margin-right: 86px;
-  }
   h3{
     color: #26262D;
   }
-  h3, .decide, .robot_decision, .user_input{
-    margin-left: 81px;
+  h3, .decide, .robot_decision, .user_input, label{
+    text-align: center;
   }
   /* div to hold score divs */
   .score{
