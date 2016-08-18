@@ -1,3 +1,9 @@
+/* grouping text align: center styling */
+.welcome, .time_holder, h2, #keep_score,
+#count_win, #count_lose, #count_draw{
+  text-align: center;
+}
+
 body{
   height: 780px;
   background-image: url('../images/full_screen_bg.jpg');
@@ -15,7 +21,6 @@ body{
 }
   .welcome{
     color: #c9c7dd;
-    text-align: center;
   }
   h3{
     color: #d8c3d8;
@@ -41,18 +46,18 @@ body{
   }
     .time_holder{
       margin-left: 14px;
-      text-align: center;
       color: #26262D;
       font-size: 16pt;
     }
     .warning{
       color: red;
+      margin-left: 38px;
     }
 
   .options{
     width: 743px;
     height: 200px;
-    margin-top: 25px;
+    margin-top: 72px;
     margin-left: -50px;
   }
     .option_img{
@@ -70,17 +75,15 @@ body{
       font-size: 24pt;
       font-weight: 600;
     }
+  .decide{
+    margin-right: 86px;
+  }
   h3{
     color: #26262D;
   }
-  h3, .decide, .robot_decision, .user_input, .warning{
-    /*text-align: center;*/
-    margin-left: 83px; 
+  h3, .decide, .robot_decision, .user_input{
+    margin-left: 81px;
   }
-    /* text for robot's decision */
-    h2{
-      text-align: center;
-    }
   /* div to hold score divs */
   .score{
     width: 600px;
@@ -113,12 +116,10 @@ body{
     #keep_score{
       margin-top: 24px;
       font-size: 20pt;
-      text-align: center;
     }
     #count_win, #count_lose, #count_draw{
       font-size: 20pt;
       margin-top: 19px;
-      text-align: center;
     }
 
 .who_won{
